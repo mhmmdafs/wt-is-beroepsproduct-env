@@ -1,0 +1,491 @@
+    body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee5e5;
+    font-weight: bold;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .navbar {
+    justify-content: center;
+    display: flex;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #2596be;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #eee5e5;
+    text-align: center;
+    padding: 14px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 17px;
+    height: 40px;
+    width: auto;
+  }
+
+    .topnav a:hover {
+      background-color: #ddcecd;
+      color: #37392e;
+    }
+
+    .topnav a.active {
+      background-color: #37392E;
+      color: #37392E;
+    }
+
+    /* searchbar */
+    .topnav input[type=text] {
+      margin-top: 14px;
+      padding: 6px;
+      border: solid;
+      border-radius: 4%;
+      margin-right: 16px;
+      font-size: 17px;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a,
+      .topnav input[type=text] {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+
+      .topnav input[type=text] {
+        border: 1px solid #ccc;
+      }
+    }
+
+    @keyframes myAnim {
+      0% {
+        animation-timing-function: ease-in;
+        opacity: 1;
+        transform: translateY(-45px);
+      }
+
+      24% {
+        opacity: 1;
+      }
+
+      40% {
+        animation-timing-function: ease-in;
+        transform: translateY(-24px);
+      }
+
+      65% {
+        animation-timing-function: ease-in;
+        transform: translateY(-12px);
+      }
+
+      82% {
+        animation-timing-function: ease-in;
+        transform: translateY(-6px);
+      }
+
+      93% {
+        animation-timing-function: ease-in;
+        transform: translateY(-4px);
+      }
+
+      25%,
+      55%,
+      75%,
+      87% {
+        animation-timing-function: ease-out;
+        transform: translateY(0px);
+      }
+
+      100% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .parent {
+      background-color: #37392E;
+      margin: 0 50px;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    
+  .child {
+      display: inline-block;
+      padding: 5px;
+      margin: 0px  15px;
+      vertical-align: middle;
+      width: 200px;
+      max-width: 300px;
+      text-align: left;
+  }
+
+    .tekstcenter {
+      text-align: center;
+      font-size: medium;
+    }
+
+    .logo {
+      height: 40px;
+      width: 40px;
+    }
+
+    .hero-text {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+
+    footer {
+      background-color: #2596be;
+      color: white;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+
+    /*styling op a en list items*/
+    a:link {
+      text-decoration: none;
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none
+    }
+
+    .button {
+      background-color: #28AFB0;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    .container,
+    .overons-container {
+      margin: 30px auto;
+      width: 275px;
+      color: white;
+    }
+
+    .container form,
+    .overons-container .overons-content {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      background: #2596be;
+      border-radius: 4px;
+      box-shadow: 0 8px 16px #37392E;
+    }
+
+    .container h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    .container input {
+      width: 90%;
+      height: 40px;
+      border-radius: 6px;
+      margin: 10px 0 18px 0;
+      padding: 0 10px;
+    }
+
+    .container select {
+      width: 100%;
+      height: 40px;
+      border-radius: 6px;
+      margin: 10px 0 18px 0;
+      padding: 0 10px;
+    }
+
+    .registreer {
+      color: white;
+      text-align: center;
+    }
+
+    .btn {
+      display: block;
+      background: #2596be;
+      width: 100%;
+      height: 40px;
+      text-decoration: none;
+      line-height: 2.5rem;
+      border: 2px solid #2596be;
+      color: white;
+      font-weight: 700;
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    .login-btn {
+      display: block;
+      background: #ddcecd;
+      width: 100%;
+      height: 40px;
+      text-decoration: none;
+      line-height: 2.5rem;
+      border: 2px solid #2596be;
+      color: white;
+      font-weight: 700;
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    .search-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #2596be;
+        width: 30%;
+        margin-top: 25px;
+        height: 30px;
+        text-decoration: none;
+        line-height: 2.5rem;
+        border: 2px solid #2596be;
+        color: white;
+        font-weight: 700;
+        border-radius: 25px;
+        text-align: center; 
+    }
+
+    .select-field {
+      display: block;
+      background: #2596be;
+      width: 100%;
+      height: 40px;
+      text-decoration: none;
+      line-height: 2.5rem;
+      border: 2px solid #2596be;
+      color: white;
+      font-weight: 700;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .cards {
+      padding: 5px;
+      margin: 30px 70px;
+      background: #28AFB0;
+      display: flex;
+      border-spacing: 5px;
+      border: 5px solid #ddcecd;
+      text-decoration: none;
+      align-items: stretch;
+      text-align: center;
+      width: 800px;
+      height: 150px;
+    }
+
+    .text-detail {
+      text-align: center;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddcecd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+
+    /* id style */
+    #privacyfooter {
+      text-decoration: none;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #overonsfooter {
+      text-decoration: none;
+      color: white;
+      margin-left: 20px;
+    }
+
+    #makerfooter {
+      text-decoration: none;
+      color: white;
+      margin-left: 20px;
+    }
+
+    #linkcolor {
+      text-decoration: none;
+      color: #37392E;
+    }
+
+    #privacy {
+      margin: 30px;
+    }
+
+    #banner-image-home {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/opvakantieouwe.jpg");
+      height: 225px;
+    }
+
+    #banner-image-vluchten {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      filter: alpha(opacity=40); /* msie */;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/vakantie-banner.png");
+      height: 300px;
+    }
+
+    /* ------------------------------- flexbox homepagina */
+
+    .flexbox-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .flexbox-list-1 {
+      width: 400px;
+      height: auto;
+    }
+
+    .flexbox-list-2 {
+      width: 400px;
+      height: auto;
+    }
+
+    /* animate */
+
+    .hoverbutton::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+  }
+  
+  .hoverbutton:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+  }
+  
+  .hoverbutton::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background: #ddcecd;
+      z-index: -1;
+      transition: transform .3s ease;
+  }
+  
+  .hoverbutton {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      position: relative;
+  }
+
+  .overflow {
+    overflow-x: auto;
+}
+
+/* link decoration */
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+  /* homepagina actie buttons */
+  .loginFormulieren {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 20px auto;
+    gap: 7px;
+}
+
+/*detailpagina grid*/
+
+.grid-vluchtgegevens {
+  margin: 30px 70px 0px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 5px solid rgb(220, 220, 220);
+  border-collapse: collapse;
+}
+
+.grid {
+  /*top, right, bottom, left*/
+  margin: 30px 70px 0px 70px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  border: 5px solid #ddcecd;
+  border-collapse: collapse;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item-column {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #19647e;
+}
+
+.grid-item-row {
+  display: flex;
+  flex-direction: column;
+  background-color: #28AFB0;
+  border-bottom: 1px solid black;
+}
+
+.grid span {
+  padding: 8px 4px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+  
