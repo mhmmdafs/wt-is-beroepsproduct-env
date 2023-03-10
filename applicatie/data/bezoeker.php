@@ -1,5 +1,5 @@
 <?php
-require_once 'db_connectie.php';
+require_once '../db_connectie.php';
 
 function gebruikersRegistratie($voornaam, $achternaam, $geboortedatum, $geslacht, $email, $gebruikersnaam, $wachtwoord, $land, $rekeningnummer, $betaalwijze) {
     $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);

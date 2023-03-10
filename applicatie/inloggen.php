@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '/applicatie/data/bezoeker.php';
+require_once './data/bezoeker.php';
 
 session_start();
 if(!empty($_POST['gebruikersnaam']) && !empty($_POST['wachtwoord'])) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../applicatie/data/bezoeker.php';
+require_once '../data/bezoeker.php';
 
 if (
    isset($_POST['voornaam']) && isset($_POST['achternaam'])

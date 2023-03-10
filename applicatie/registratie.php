@@ -31,10 +31,12 @@ session_start();
   <main>
     <h1 id="linkcolor" class="registreer">Meld je aan bij Geldre Airport</h1>
     <?php
-    if (isset($_GET['/applicatie/components/registratieverificatie'])) {
+    if (isset($_GET['./components/registratieverificatie.php'])) {
 
-      if (isset($_GET['/applicatie/components/registratieverificatie'])) {
-        $foutmelding = $_GET['/applicatie/components/registratieverificatie'];
+      if (isset($_GET['./components/registratieverificatie.php'])) {
+        $foutmelding = $_GET['./components/registratieverificatie.php'];
+
+        echo 'ik ben er';
         switch ($foutmelding) {
           case 'empty':
             echo '<p class="foutmelding">Niet alle velden zijn ingevuld</p>';
