@@ -308,7 +308,7 @@
       align-items: stretch;
       text-align: center;
       width: 800px;
-      height: 150px;
+      height: auto;
     }
 
     .text-detail {

@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
   <head>
@@ -22,8 +28,26 @@
 
     <main>
       <section class="container">
-        <form method="post" action="action/bezoeker/vluchtgegevens.html">
+        <form method="post" action="inloggen.php">
           <h2>Inloggen</h2>
+          <?php
+          if (isset($_GET['inloggen'])) {
+                    $foutmelding = $_GET['inloggen'];
+                    switch ($foutmelding) {
+                        case 'error':
+                            echo '<p class="foutmelding">U moet eerst inloggen</p>';
+                            break;
+                        case 'login':
+                            echo '<p class="foutmelding">Uw gebruikersnaam en/of wachtwoord komen niet overeen</p>';
+                            break;
+                        case 'empty':
+                            echo '<p class="foutmelding">Niet alle velden zijn ingevuld</p>';
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                ?>
           <div>
             <label for="gebruikersnaam">Gebruikersnaam</label>
             <input
@@ -49,7 +73,7 @@
           </div>
           <p>
             Heb je nog geen account?
-            <a id="likcolor" href="registratie.html">Meld je aan</a>
+            <a id="likcolor" href="registratie.php">Meld je aan</a>
           </p>
         </form>
       </section>

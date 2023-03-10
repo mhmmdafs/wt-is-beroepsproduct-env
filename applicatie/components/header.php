@@ -8,8 +8,7 @@ function maakHeader($active) {
     echo '<li><a href="privacyverklaring.php">Privacyverklaring</a></li>';
     echo '</ul>' . '</div>' . '</li>';
     echo '<li><a href="filmoverzicht.php" class=' . ($active == 'filmoverzicht' ? "'active'" : "") . '>Filmoverzicht</a></li>';
-    echo '<li><a href="abonnement.php" class=' . ($active == 'abonnement' ? "'active'" : "") . '>Abonnement</a></li>';
-    echo '<li><a href="inloggen.php" class=' . ($active == 'inloggen' ? "'active'" : "") . '>Inloggen</a></li>';
+    echo '<li><a href="login.php" class=' . ($active == 'inloggen' ? "'active'" : "") . '>Inloggen</a></li>';
     echo '</ul>' . '</nav>';
 }
 

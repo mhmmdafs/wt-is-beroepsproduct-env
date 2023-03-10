@@ -1,3 +1,22 @@
+<?php
+session_start();
+// require_once 'includes/header.php';
+// require_once 'includes/footer.php';
+require_once 'components/vluchten.php';
+require_once 'components/toonVluchten.php';
+
+$vluchten = verkrijgVluchten();
+$bestemmingen = verkrijgBestemmingen();
+$vertrektijden = verkrijgTijden();
+$koffergewichten = verkrijgKoffergewichten();
+
+
+// if (!isset($_SESSION['user'])) {
+//     header('Location: login.php?login=error');
+// }
+// 
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -87,144 +106,9 @@
       <!-- kaarten van de vluchten -->
 
       <div class="overflow">
-        <a href="detail.html">
-          <div class="cards">
-            <table>
-              <thead>
-                <tr>
-                  <th>Curaçao</th>
-                  <th>Vertrekt
-                  <th>
-                  <th>Vluchtnummer
-                  <th>
-                  <th>Prijs</th>
-                  <th>Details --></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(CUR)</td>
-                  <td>Do 1 December</td>
-                  <td></td>
-                  <td>01</td>
-                  <td></td>
-                  <td>€200.00 p.p</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="cards">
-            <table>
-              <thead>
-                <tr>
-                  <th>Kaapverdië</th>
-                  <th>Vertrekt
-                  <th>
-                  <th>Vluchtnummer
-                  <th>
-                  <th>Prijs</th>
-                  <th>Details --></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(KPV)</td>
-                  <td>Vr 2 dec</td>
-                  <td></td>
-                  <td>02</td>
-                  <td></td>
-                  <td>€200.00 p.p</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="cards">
-            <table>
-              <thead>
-                <tr>
-                  <th>Egypte</th>
-                  <th>Vertrekt
-                  <th>
-                  <th>Vluchtnummer
-                  <th>
-                  <th>Prijs</th>
-                  <th>Details --></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(EGY)</td>
-                  <td>Za 3 december</td>
-                  <td></td>
-                  <td>03</td>
-                  <td></td>
-                  <td>€200.00 p.p</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="cards">
-            <table>
-              <thead>
-                <tr>
-                  <th>Griekenland</th>
-                  <th>Vertrekt
-                  <th>
-                  <th>Vluchtnummer
-                  <th>
-                  <th>Prijs</th>
-                  <th>Details --></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(GRI)</td>
-                  <td>Zo 4 December</td>
-                  <td></td>
-                  <td>04</td>
-                  <td></td>
-                  <td>€200.00 p.p</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="cards">
-            <table>
-              <thead>
-                <tr>
-                  <th>Bonaire</th>
-                  <th>Vertrekt
-                  <th>
-                  <th>Vluchtnummer
-                  <th>
-                  <th>Prijs</th>
-                  <th>Details --></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>(BON)</td>
-                  <td>Ma 5 December</td>
-                  <td></td>
-                  <td>05</td>
-                  <td></td>
-                  <td>€200.00 p.p</td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </a>
-
-      </div>
+            <?php
+                toonVluchten($vluchten);
+            ?>
     </main>
 
     <footer class="footer">
