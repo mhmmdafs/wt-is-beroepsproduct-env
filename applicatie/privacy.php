@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'components/header.php';
+require_once 'components/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -13,14 +19,9 @@
 </head>
 
 <body>
-  <div class="navbar topnav">
-    <nav class="topnav">
-      <a class="logo" href="home.php"><img alt="logo" class="logo" src="images/plane.png"></a>
-      <a href="vluchten.php">Vluchten</a>
-      <a href="login.php">Inloggen</a>
-      <input type="text" placeholder="Search..">
-    </nav>
-  </div>
+  <?php
+  maakHeader();
+  ?>
 
   <h1>Privacyverklaring</h1>
   <p>Wij nemen de privacy van onze bezoekers serieus en zetten ons in om uw persoonlijke informatie te beschermen. Deze
@@ -49,12 +50,7 @@
   <p>Als u vragen heeft over onze privacyverklaring, kunt u contact met ons opnemen via [e-mailadres of telefoonnummer].
   </p>
 
-
-  <footer class="footer">
-    <a id="privacyfooter" href="privacy.php">Privacy</a>
-    <a id="overonsfooter" href="overons.php">Over ons</a>
-    <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-  </footer>
+  <?php maakFooter(); ?>
 </body>
 
 </html>

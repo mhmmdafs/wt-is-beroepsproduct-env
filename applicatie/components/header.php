@@ -13,7 +13,7 @@ function maakHeader() {
     echo '<input type="text" placeholder="Search..">';
 
     if (isset($_SESSION['user'])) {
-        echo '<a>' . $_SESSION['user']['gebruikersnaam'] . '</a>';
+        echo '<a href=passagiers.php>' . $_SESSION['user']['gebruikersnaam'] . '</a>';
         echo '<a href="uitloggen.php">Uitloggen</a>';
     }
 
