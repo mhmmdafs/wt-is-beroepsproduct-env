@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once 'components/header.php';
+require_once 'components/footer.php';
 
 ?>
 
@@ -19,9 +21,9 @@ session_start();
   <body>
     <div class="navbar topnav">
       <nav class="topnav">
-        <a class="logo" href="home.html"><img alt="logo" class="logo" src="images/plane.png"></a>
-        <a href="vluchten.html">Vluchten</a>
-        <a href="login.html">Inloggen</a>
+        <a class="logo" href="home.php"><img alt="logo" class="logo" src="images/plane.png"></a>
+        <a href="vluchten.php">Vluchten</a>
+        <a href="login.php">Inloggen</a>
         <input type="text" placeholder="Search..">
       </nav>
     </div>
@@ -78,11 +80,7 @@ session_start();
         </form>
       </section>
     </main>
-    <!-- Onderkant pagina (footer) -->
-    <footer class="footer">
-        <a id="privacyfooter" href="privacy.html">Privacy</a>
-        <a id="overonsfooter" href="overons.html">Over ons</a>
-        <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-      </footer>
+    
+    <?php maakFooter();?>
   </body>
 </html>

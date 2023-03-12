@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'components/header.php';
+require_once 'components/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -12,14 +18,9 @@
 </head>
 
   <body>
-    <div class="navbar topnav">
-      <nav class="topnav">
-        <a class="logo" href="home.html"><img alt="logo" class="logo" src="images/plane.png"></a>
-        <a href="vluchten.html">Vluchten</a>
-        <a href="login.html">Inloggen</a>
-        <input type="text" placeholder="Search..">
-      </nav>
-    </div>
+    <?php
+    maakHeader();
+    ?>
 
     <main>
       <section class="overons-container">
@@ -37,10 +38,6 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <a id="privacyfooter" href="privacy.html">Privacy</a>
-      <a id="overonsfooter" href="overons.html">Over ons</a>
-      <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-    </footer>   
+    <?php maakFooter();?>
   </body>
 </html>

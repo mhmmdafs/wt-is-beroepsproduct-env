@@ -1,20 +1,24 @@
 <?php
 
-function maakHeader($active) {
-    echo '<h1 id="logo"><a href="index.php" class=' . ($active == 'logo' ? "'active'" : "") . '>Fletnix</a></h1>';
-    echo '<nav>' . '<ul>';
-    echo '<li><a href="overons.php" class=' . ($active == 'overons' ? "'active'" : "") . '>Over ons</a>';
-    echo '<div class="sub-menu">' . '<ul>';
-    echo '<li><a href="privacyverklaring.php">Privacyverklaring</a></li>';
-    echo '</ul>' . '</div>' . '</li>';
-    echo '<li><a href="filmoverzicht.php" class=' . ($active == 'filmoverzicht' ? "'active'" : "") . '>Filmoverzicht</a></li>';
-    echo '<li><a href="login.php" class=' . ($active == 'inloggen' ? "'active'" : "") . '>Inloggen</a></li>';
-    echo '</ul>' . '</nav>';
+function maakHeader() {
+    echo '<div class="navbar topnav">';
+    echo '<nav class="topnav">';
+    echo '<a class="logo" href="home.php"><img alt="logo" class="logo" src="images/plane.png"></a>';
+    echo '<a href="vluchten.php">Vluchten</a>';
+
+    if (!isset($_SESSION['user'])) {
+        echo '<a href="login.php">Inloggen</a>';
+    }
+
+    echo '<input type="text" placeholder="Search..">';
+
+    if (isset($_SESSION['user'])) {
+        echo '<a>' . $_SESSION['user']['gebruikersnaam'] . '</a>';
+        echo '<a href="uitloggen.php">Uitloggen</a>';
+    }
+
+    echo '</nav>';
+    echo '</div>';
 }
 
-function maakHeaderIngelogd($active) {
-    echo '<h1 id="logo"><a href="ingelogd.php" class=' . ($active == 'logo' ? "'active'" : "") . '>Fletnix</a></h1>';
-    echo '<nav>' . '<ul>';
-    echo '<li><a href="zoekopties.php" class=' . ($active == 'zoekopties' ? "'active'" : "") . '>Zoekopties</a></li>';
-    echo '<li><a class="ingelogd" href="../logout.php">' . $_SESSION['user']['firstname'] . '</a></li></ul></nav>';
-}
+

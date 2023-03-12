@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'components/header.php';
+require_once 'components/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -13,15 +19,9 @@
 
 
 <body>
-    <div class="navbar topnav">
-        <nav class="topnav">
-            <a href="home.html"><img alt="logo" class="logo" src="images/plane.png"></a>
-            <a href="vluchten.html">Vluchten</a>
-            <a href="login.html">Inloggen</a>
-            <input type="text" placeholder="Search..">
-        </nav>
-    </div>
-
+    <?php
+    maakHeader();
+    ?>
     <main>
         <div id="hero-image-home">
             <div class="hero-text">
@@ -31,24 +31,19 @@
     </main>
 
     <div>
-        <a class="button" href="vluchten.html">BOEK NU JOU VLUCHT</a>
+        <a class="button" href="vluchten.php">BOEK NU JOU VLUCHT</a>
     </div>
 
     <ul>
         <li>Onze populairste bestemmingen</li>
-        <li><a href="detail.html"><img src="images/curacao.jpg" alt=""><span>Curaçao</span></a></li>
-        <li><a href="detail.html"><img src="images/kaapverdie.jpg" alt=""><span>Kaapverdië</span></a></li>
-        <li><a href="detail.html"><img src="images/egypte.jpg" alt=""><span>Egypte</span></a></li>
-        <li><a href="detail.html"><img src="images/griekenland.jpg" alt=""><span>Griekenland</span></a></li>
-        <li><a href="detail.html"><img src="images/bonaire.jpg" alt=""><span>Bonaire</span></a></li>
+        <li><a href="detail.php"><img src="images/curacao.jpg" alt=""><span>Curaçao</span></a></li>
+        <li><a href="detail.php"><img src="images/kaapverdie.jpg" alt=""><span>Kaapverdië</span></a></li>
+        <li><a href="detail.php"><img src="images/egypte.jpg" alt=""><span>Egypte</span></a></li>
+        <li><a href="detail.php"><img src="images/griekenland.jpg" alt=""><span>Griekenland</span></a></li>
+        <li><a href="detail.php"><img src="images/bonaire.jpg" alt=""><span>Bonaire</span></a></li>
     </ul>
 
-    <!-- Onderkant pagina (footer) -->
-    <footer class="footer">
-        <a id="privacyfooter" href="privacy.html">Privacy</a>
-        <a id="overonsfooter" href="overons.html">Over ons</a>
-        <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-    </footer>
+    <?php maakFooter();?>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 <?php
 session_start();
-// require_once 'includes/header.php';
-// require_once 'includes/footer.php';
+require_once 'components/header.php';
+require_once 'components/footer.php';
+require_once 'db_connectie.php'
 
 ?>
 
@@ -19,14 +20,9 @@ session_start();
 </head>
 
 <body>
-  <div class="navbar topnav">
-    <nav class="topnav">
-      <a class="logo" href="home.html"><img alt="logo" class="logo" src="images/plane.png"></a>
-      <a href="vluchten.html">Vluchten</a>
-      <a href="login.html">Inloggen</a>
-      <input type="text" placeholder="Search..">
-    </nav>
-  </div>
+  <?php
+  maakHeader();
+  ?>
 
   <main>
     <h1 id="linkcolor" class="registreer">Meld je aan bij Geldre Airport</h1>
@@ -76,7 +72,7 @@ session_start();
     }
     ?>
     <section class="container">
-      <form method="post" action="login.php">
+      <form method="post" action="components/registratieverificatie.php">
         <div>
           <label for="voornaam">Voornaam</label>
           <input type="text" name="voornaam" id="voornaam" required />
@@ -118,9 +114,9 @@ session_start();
           <label for="landnaam"> Land </label>
           <select name="landnaam" id="landnaam" required>
             <option value="" selected>Kies jouw land</option>
-            <option value='1'>Nederland</option>
-            <option value='2'>Duitsland</option>
-            <option value='3'>België</option>
+            <option value='Nederland'>Nederland</option>
+            <option value='Duitsland'>Duitsland</option>
+            <option value='België'>België</option>
           </select>
         </div>
 
@@ -147,12 +143,7 @@ session_start();
     </section>
   </main>
 
-  <!-- Onderkant pagina (footer) -->
-  <footer class="footer">
-    <a id="privacyfooter" href="privacy.html">Privacy</a>
-    <a id="overonsfooter" href="overons.html">Over ons</a>
-    <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-  </footer>
+  <?php maakFooter(); ?>
 </body>
 
 </html>

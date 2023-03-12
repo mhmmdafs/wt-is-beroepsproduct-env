@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once 'components/header.php';
+require_once 'components/footer.php';
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -14,16 +20,16 @@
 <body>
   <div class="navbar topnav">
     <nav class="topnav">
-      <a class="logo" href="home.html"><img alt="logo" class="logo" src="images/plane.png"></a>
-      <a href="vluchten.html">Vluchten</a>
-      <a href="login.html">Inloggen</a>
+      <a class="logo" href="home.php"><img alt="logo" class="logo" src="images/plane.png"></a>
+      <a href="vluchten.php">Vluchten</a>
+      <a href="login.php">Inloggen</a>
       <input type="text" placeholder="Search..">
     </nav>
   </div>
     
     <main>
         <section class="container">
-          <form method="post" action="action/medewerker/vluchtgegevens.html">
+          <form method="post" action="action/medewerker/vluchtgegevens.php">
             <h2>Inloggen Medewerker</h2>
             <div>
               <label for="gebruikersnaam">Gebruikersnaam</label>
@@ -51,12 +57,7 @@
           </form>
         </section>
       </main>
-    <!-- Onderkant pagina (footer) -->
-    <footer class="footer">
-        <a id="privacyfooter" href="privacy.html">Privacy</a>
-        <a id="overonsfooter" href="overons.html">Over ons</a>
-        <p id="makerfooter">&copy; 2023 - Mohammed Afentrous</p>
-      </footer>   
-    
+      
+      <?php maakFooter();?>
 </body>
 </html>

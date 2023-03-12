@@ -1,5 +1,5 @@
 <?php
-require_once '../db_connectie.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/db_connectie.php';
 
 function gebruikersRegistratie($voornaam, $achternaam, $geboortedatum, $geslacht, $email, $gebruikersnaam, $wachtwoord, $land, $rekeningnummer, $betaalwijze) {
     $passwordHashed = password_hash($wachtwoord, PASSWORD_DEFAULT);
@@ -12,10 +12,10 @@ function gebruikersRegistratie($voornaam, $achternaam, $geboortedatum, $geslacht
     }
 
 
-function verkrijgGegevens($email) {
+function verkrijgGegevens($gebruikersnaam) {
     $verbinding = maakVerbinding();
-    $query = $verbinding-> prepare("SELECT * FROM users WHERE email = :email");
-    $query->execute([':email' => $email]);
+    $query = $verbinding-> prepare("SELECT * FROM users WHERE gebruikersnaam = :gebruikersnaam");
+    $query->execute([':gebruikersnaam' => $gebruikersnaam]);
     return $query->fetch();
 }
 
