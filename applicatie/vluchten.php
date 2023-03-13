@@ -3,18 +3,13 @@ session_start();
 require_once 'components/header.php';
 require_once 'components/footer.php';
 require_once 'components/vluchten.php';
-require_once 'components/toonVluchten.php';
+require_once 'components/toonvluchten.php';
 
 $vluchten = verkrijgVluchten();
 $bestemmingen = verkrijgBestemmingen();
 $vertrektijden = verkrijgTijden();
 $koffergewichten = verkrijgKoffergewichten();
 
-
-// if (!isset($_SESSION['user'])) {
-//     header('Location: login.php?login=error');
-// }
-// 
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +93,6 @@ $koffergewichten = verkrijgKoffergewichten();
       </div>
 
       <!-- kaarten van de vluchten -->
-
       <div class="overflow">
             <?php
                 toonVluchten($vluchten);
