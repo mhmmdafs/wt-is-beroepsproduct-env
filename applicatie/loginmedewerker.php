@@ -41,7 +41,7 @@ if(!empty($_POST['gebruikersnaam']) && !empty($_POST['wachtwoord'])) {
 
   <main>
     <section class="container">
-      <form method="post" action="inloggen.php">
+      <form method="post" action="inloggenmedewerker.php">
         <h2>Inloggen Medewerker</h2>
         <div>
           <?php
