@@ -23,7 +23,7 @@ function verkrijgVluchten()
 function verkrijgVlucht($vluchtnummer) 
 {
     $verbinding = maakVerbinding();
-    $query = $verbinding-> prepare("SELECT * FROM Vlucht WHERE vluchtnummer = :vluchtnummer");
+    $query = $verbinding->prepare("SELECT * FROM Vlucht WHERE vluchtnummer = :vluchtnummer");
     $query->execute([':vluchtnummer' => $vluchtnummer]);
     return $query->fetch();
 }

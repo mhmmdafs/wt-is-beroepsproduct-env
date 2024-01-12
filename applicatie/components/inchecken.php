@@ -1,5 +1,5 @@
 <?php
-require_once '../db_connectie.php';
+require_once 'db_connectie.php';
 
 
 function inchecken($vluchtnummer, $email, $aantal_koffers, $koffer_gewicht) {
