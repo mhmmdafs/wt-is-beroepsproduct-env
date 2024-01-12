@@ -9,7 +9,7 @@ require_once 'components/vluchten.php';
 $vlucht = verkrijgVlucht($_GET['vluchtnr']);
 
 require_once 'components/incheckstatus.php';
-$userIngecheckt = isGebruikerIngecheckt($_GET['vluchtnr'], $_SESSION['user']['email']);
+//$userIngecheckt = isGebruikerIngecheckt($_GET['vluchtnr'], $_SESSION['user']['email']);
 ?>
 
 <!DOCTYPE html>
